@@ -1,0 +1,32 @@
+{
+  "data":[
+    {
+      "path": "/user/new/",
+      "component": "./src/views/new/Main.vue"
+    },{
+      "path": "/user/blog/",
+      "component": "./src/views/blog/Main.vue"
+    },{
+      "path": "/user/blog/add",
+      "component": "./src/views/blog/Add.vue"
+    },{
+      "path": "/user/blog/edit/:id(\\d+)",
+      "component": "./src/views/blog/Edit.vue"
+    },{
+      "path": "/user/blog/details/:id(\\d+)",
+      "component": "./src/views/blog/Details.vue"
+    },{
+      "path": "/user/social/",
+      "component": "./src/views/social/Main.vue"
+    },{
+      "path": "/user/social/details/:name",
+      "component": "./src/views/social/Details.vue"
+    },{
+      "path": "/user/project/",
+      "component": "./src/views/project/Main.vue"
+    },{
+      "path": "/user/project/:name",
+      "component": "./src/views/project/Details.vue"
+    }
+  ]
+}
