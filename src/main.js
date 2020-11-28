@@ -55,9 +55,6 @@ export default function(Vue, { router, appOptions, isClient }) {
   // });
 
   router.beforeEach((to, from, next) => {
-    console.log(to, from);
-
-    // Vue.prototype.$setTitle(to.meta.title)
     next();
   });
 
