@@ -1,22 +1,22 @@
 import request from '@/utils/request'
-// import store from '../store/index'
+import store from '../store/index'
 
 export default {
     getBlogReadme: function () {
-        let githubUsername = 'GitHub-Laziji'
+        let githubUsername = store.state.configuration.githubUsername
         return request({
             url: '/repos/' + githubUsername + '/' + githubUsername + '.github.io/contents/README.md'
         })
     },
     getBlogConfigure: function () {
-        let githubUsername = 'GitHub-Laziji'
+        let githubUsername = store.state.configuration.githubUsername
         return request({
             url: '/repos/' + githubUsername + '/' + githubUsername + '.github.io/contents/static/configuration.json'
         })
     },
     editBlogConfigure: function (configure, sha) {
         let content = JSON.stringify(configure)
-        let githubUsername = 'GitHub-Laziji'
+        let githubUsername = store.state.configuration.githubUsername
         return request({
             url: '/repos/' + githubUsername + '/' + githubUsername + '.github.io/contents/static/configuration.json',
             method: 'PUT',
@@ -29,14 +29,14 @@ export default {
         })
     },
     list: function (query) {
-        let githubUsername = 'GitHub-Laziji'
+        let githubUsername = store.state.configuration.githubUsername
         return request({
             url: `/users/${githubUsername}/repos?page=${query.page}&per_page=${query.pageSize}`
 
         })
     },
     single: function (name) {
-        let githubUsername = 'GitHub-Laziji'
+        let githubUsername = store.state.configuration.githubUsername
         return new Promise((resolve, reject) => {
             request({
                 url: '/repos/' + githubUsername + '/' + name

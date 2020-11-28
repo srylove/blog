@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Vue from 'vue'
-// import store from '../store/index'
+import store from '../store/index'
 
 
 const service = axios.create({
@@ -10,14 +10,14 @@ const service = axios.create({
 
 service.interceptors.request.use(
     config => {
-        // let token = store.state.token.token
-        // if (token) {
-        //     let sp = "?"
-        //     if (config.url.indexOf("?") >= 0) {
-        //         sp = "&"
-        //     }
-        //     config.url = config.url + sp + "access_token=" + token
-        // }
+        let token = store.state.token.token
+        if (token) {
+            let sp = "?"
+            if (config.url.indexOf("?") >= 0) {
+                sp = "&"
+            }
+            config.url = config.url + sp + "access_token=" + token
+        }
         return config
     },
     error => {

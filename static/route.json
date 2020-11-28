@@ -1,0 +1,59 @@
+{
+  "data": [
+
+    {
+      "path": "/user/new/main",
+      "component": "./src/pages/new/Main.vue"
+    },
+    {
+      "path": "/user/new",
+      "component": "./src/pages/new/Main.vue"
+    },
+    {
+      "path": "/user/social/main",
+      "component": "./src/pages/social/Main.vue"
+    },
+    {
+      "path": "/user/social",
+      "component": "./src/pages/social/Main.vue"
+    },
+    {
+      "path": "/user/social/details/:name",
+      "component": "./src/pages/social/Details.vue"
+    },
+    {
+      "path": "/user/blog",
+      "component": "./src/pages/blog/Main.vue"
+    },
+    {
+      "path": "/user/blog/main",
+      "component": "./src/pages/blog/Main.vue"
+    },
+    {
+      "path": "/user/blog/add",
+      "component": "./src/pages/blog/Add.vue"
+    },
+    {
+      "path": "/user/blog/edit/:id",
+      "component": "./src/pages/blog/Edit.vue"
+    },
+    {
+      "path": "/user/blog/details/:id",
+      "component": "./src/pages/blog/Details.vue"
+    },
+    {
+      "path": "/user/project/details/:name",
+      "component": "./src/pages/project/Details.vue"
+    },
+    {
+      "path": "/user/project/main",
+      "component": "./src/pages/project/Main.vue"
+    },
+    {
+      "path": "/user/project",
+      "component": "./src/pages/project/Main.vue"
+    }
+
+
+  ]
+}
