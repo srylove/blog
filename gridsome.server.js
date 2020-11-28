@@ -13,7 +13,6 @@ module.exports = function (api) {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
     const dataJson = require('./static/route.json');
-    console.log(dataJson)
     let {data} = dataJson
     for (const iterator of data) {
       createPage(iterator)

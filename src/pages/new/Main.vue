@@ -53,7 +53,7 @@ export default {
   async mounted() {
     this.loading = true;
     let response = await GistApi.list(this.query);
-
+    
     let result = response.data;
     if (!result || result.length == 0) {
       this.loading = false;
@@ -75,28 +75,6 @@ export default {
       break;
     }
     this.loading = false
-    // GistApi.list(this.query).then((response) => {
-    //     let result = response.data
-    //     if (!result || result.length == 0) {
-    //         this.loading = false
-    //         return
-    //     }
-    //     for (let key in result[0].files) {
-    //         this.blog.id = result[0]['id']
-    //         break
-    //     }
-    //     GistApi.single(this.blog.id).then((response) => {
-    //         let result = response.data
-    //         for (let key in result.files) {
-    //             this.blog['title'] = key
-    //             this.blog['content'] = this.$markdown(result.files[key]['content'])
-    //             this.blog['description'] = result['description']
-    //             this.blog['createTime'] = this.$util.utcToLocal(result['created_at'])
-    //             this.blog['updateTime'] = this.$util.utcToLocal(result['updated_at'])
-    //             break
-    //         }
-    //     }).then(() => this.loading = false)
-    // })
   },
 };
 </script>

@@ -49,15 +49,31 @@ const configuration = {
             commit('SET_CONFIGURATION', configuration)
         },
         Init({ commit }) {
-            let xmlhttp
-            if (window.XMLHttpRequest) {
-                xmlhttp = new XMLHttpRequest()
-            } else {
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+            // let xmlhttp
+            // if (window.XMLHttpRequest) {
+            //     xmlhttp = new XMLHttpRequest()
+            // } else {
+            //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+            // }
+            // xmlhttp.open("GET", "/configuration.json", false)
+            // xmlhttp.send()
+            // let configuration = JSON.parse(xmlhttp.responseText)
+            let configuration = {
+                "githubUsername": "GitHub-Laziji",
+                "blogTitle": "Laziji",
+                "blogDescribe": "欢迎来到辣子鸡的个人博客。",
+                "htmlTitle": "辣子鸡的博客",
+                "fontColor": "#ffffff",
+                "useBackgroundImage": false,
+                "backgroundColorLeft": "#2690F9",
+                "backgroundColorRight": "#FC2D2D",
+                "audioUrl": "http://sc1.111ttt.cn:8282/2018/1/03m/13/396131232171.m4a?tflag=1519095601&pin=6cd414115fdb9a950d827487b16b5f97#.mp3",
+                "mini": false,
+                "webSites":[
+                    {"name":"v2ex" , "url":"https://www.v2ex.com/member/laziji"}
+                ]
             }
-            xmlhttp.open("GET", "/configuration.json", false)
-            xmlhttp.send()
-            let configuration = JSON.parse(xmlhttp.responseText)
+
             console.log('configuration',configuration)
             commit('SET_CONFIGURATION', configuration)
         }

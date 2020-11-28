@@ -26,12 +26,17 @@ import configuration from "./store/modules/configuration";
 import getters from "./store/getters";
 
 export default function(Vue, { router, appOptions, isClient }) {
-  Vue.use(Vant);
-  Vue.use(ElementUI);
   Vue.use(Vuex);
-  Vue.use(mavonEditor);
   Vue.use(Router);
-
+  if (typeof window !== "undefined") {
+    Vue.use(Vant);
+    Vue.use(ElementUI);
+    Vue.use(mavonEditor);
+    Vue.prototype.$markdown = function(value) {
+      return mavonEditor.markdownIt.render(value);
+    };
+  }
+  Vue.prototype.$util = util;
   appOptions.store = new Vuex.Store({
     modules: {
       token,
@@ -49,17 +54,12 @@ export default function(Vue, { router, appOptions, isClient }) {
   //   },
   // });
 
-  Vue.prototype.$markdown = function(value) {
-    return mavonEditor.markdownIt.render(value);
-  };
   router.beforeEach((to, from, next) => {
     console.log(to, from);
 
     // Vue.prototype.$setTitle(to.meta.title)
     next();
   });
-
-  Vue.prototype.$util = util;
 
   Vue.config.productionTip = false;
   // Set default layout as a global component

@@ -1,6 +1,9 @@
 {
   "data": [
-
+    {
+      "path": "/",
+      "component": "./src/pages/new/Main.vue"
+    },
     {
       "path": "/user/new/main",
       "component": "./src/pages/new/Main.vue"

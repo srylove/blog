@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Layout from '@/pages/layout/Layout'
+// import Layout from '@/pages/layout/Layout'
 
 import NewMain from '@/pages/new/Main'
 import SocialMain from '@/pages/social/Main'
@@ -23,7 +23,7 @@ export const constantRouterMap = [
     {
         path: '/user/new',
         redirect: '/user/new/main',
-        component: Layout,
+        //component: Layout,
         meta: {
             type: "user",
             icon: 'el-icon-star-off',
@@ -40,7 +40,7 @@ export const constantRouterMap = [
     {
         path: '/user/social',
         redirect: '/user/social/main',
-        component: Layout,
+        //component: Layout,
         meta: {
             type: "user",
             icon: 'el-icon-mobile-phone',
@@ -62,7 +62,7 @@ export const constantRouterMap = [
     {
         path: '/user/blog',
         redirect: '/user/blog/main',
-        component: Layout,
+        //component: Layout,
         meta: {
             type: "user",
             icon: 'el-icon-edit-outline',
@@ -94,7 +94,7 @@ export const constantRouterMap = [
     {
         path: '/user/project',
         redirect: '/user/project/main',
-        component: Layout,
+        //component: Layout,
         meta: {
             type: "user",
             icon: 'el-icon-service',
@@ -116,7 +116,7 @@ export const constantRouterMap = [
     {
         path: '/user/configure',
         redirect: '/user/configure/main',
-        component: Layout,
+        //component: Layout,
         meta: {
             type: "user",
             icon: 'el-icon-setting',
