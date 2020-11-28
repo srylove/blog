@@ -28,9 +28,9 @@ import getters from "./store/getters";
 export default function(Vue, { router, appOptions, isClient }) {
   Vue.use(Vuex);
   Vue.use(Router);
-  if (typeof window !== "undefined") {
-    Vue.use(Vant);
     Vue.use(ElementUI);
+    Vue.use(Vant);
+  if (typeof window !== "undefined") {
     Vue.use(mavonEditor);
     Vue.prototype.$markdown = function(value) {
       return mavonEditor.markdownIt.render(value);
